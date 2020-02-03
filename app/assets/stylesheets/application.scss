@@ -2,3 +2,20 @@
 @import "@fontawesome/fontawesome-free/css/fontawesome.min.css";
 @import "@fontawesome/fontawesome-free/css/solid.min.css";
 @import "bulma-quickview/dist/css/bulma-quickview";
+
+.navbar-burger.burger.desktop-burger {
+    display: block;
+}
+
+.sidebar-menu {
+    li {
+        padding: 0.7em;
+
+        a {
+            &:link, &:visited, &:active {
+                text-decoration: none;
+                color:  $white-ter;
+            }
+        }
+    }
+}
