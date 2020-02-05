@@ -12,34 +12,44 @@
   </head>
 
   <body>
-    
-    <nav clas="navbar has-background-primary has-text-white-ter">
-      <div class="container">
-        <div class="navbar-brand">
-          <div class="navbar-item has-text-white-ter">
-            <%= image_tag "logo-menu.png" %>
+    <% if user_signed_in? %>
+      <nav clas="navbar has-background-primary has-text-white-ter">
+        <div class="container">
+          <div class="navbar-brand">
+            <div class="navbar-item has-text-white-ter">
+              <%= image_tag "logo-menu.png" %>
+            </div>
+            
+            <div class="navbar-burger burger has-text-white-ter" data-show="quickview" data-targert="left-sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-          
-          <div class="navbar-burger burger has-text-white-ter" data-show="quickview" data-targert="left-sidebar">
+
+          <div class="navbar-burger burger has-text-white-ter desktop-burger is-hidden-touch" data-show="quickview" data-targert="left-sidebar">
             <span></span>
             <span></span>
             <span></span>
           </div>
         </div>
 
-        <div class="navbar-burger burger has-text-white-ter desktop-burger is-hidden-touch" data-show="quickview" data-targert="left-sidebar">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
+        <%= render "layouts/sidebar" %>
 
-      <%= render "layouts/sidebar" %>
-
-    </nav>
+      </nav>
+    <% end %>
     
     <section class="section">
       <div class="container">
+        <% if alert %>
+          <div class="notification is-danger">
+            <%= alert %>
+          </div>
+          <% elsif notice %>
+            <div class="notification is-success">
+              <%= notice %>
+            </div>
+          <% end %>
         <%= yield %>
       </div>
     </section>
