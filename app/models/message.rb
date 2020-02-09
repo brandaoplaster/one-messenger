@@ -3,4 +3,12 @@ class Message < ApplicationRecord
   belongs_to :receiver, class_name: "User"
 
   validates :content, presence: true
+
+  after_crate :send_message
+
+  private
+
+  def send_message
+    MessageSenderJob.perform_now(self)
+  end
 end
