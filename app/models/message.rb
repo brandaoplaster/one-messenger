@@ -4,7 +4,7 @@ class Message < ApplicationRecord
 
   validates :content, presence: true
 
-  after_crate :send_message
+  after_create :send_message
 
   private
 
