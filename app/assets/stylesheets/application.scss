@@ -1,0 +1,33 @@
+@import "bulma/bulma";
+@import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+@import "@fortawesome/fontawesome-free/css/solid.min.css";
+@import "bulma-quickview/dist/css/bulma-quickview";
+@import "./chats";
+@import "./messages";
+
+.navbar-burger.burger.desktop-burger {
+    display: block;
+}
+
+.sidebar-menu {
+    li {
+        padding: 0.7em;
+
+        a {
+            &:link, &:visited, &:active {
+                text-decoration: none;
+                color:  $white-ter;
+            }
+        }
+    }
+}
+
+.button.fa-button {
+    position: fixed;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    bottom: 30px;
+    right: 30px;
+}
