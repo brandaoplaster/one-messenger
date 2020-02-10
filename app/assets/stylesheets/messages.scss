@@ -3,10 +3,10 @@ div.columns.message {
 	background-color: transparent;
 
 	div.column {
-		margin: 0px;
+		margin: 0;
 
 		&.date {
-			padding: 0px;
+			padding: 0;
 			font-size: 8pt;
 		}
 	}
@@ -16,7 +16,7 @@ div.columns.message {
 
 		div.column {
 			&.content {
-				color: $grey-darken;
+				color: $grey-darker;
 				background-color: #99FF99;
 			}
 
@@ -29,7 +29,7 @@ div.columns.message {
 	&.receiver {
 		div.column.content {
 			color: $black-ter;
-			background-color: $white-ter;
+			background-color: $white-ter
 		}
 	}
 }
